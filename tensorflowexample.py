@@ -8,6 +8,9 @@ class_names = ['T-shirt','trouser','pullover','dress','coat','sandal','shirt','s
 train_images = train_images/255.0
 test_images = test_images/255.0
 model = tf.keras.Sequential([
+    #You can even add Conv2D also for 2D convolution to make your own CNN
+    #Then add MaxPooling for pooling the data
+	
     tf.keras.layers.Flatten(input_shape=(28,28)),
     #tf.keras.layers.Dropout(0.2),
     tf.keras.layers.Dense(128,activation='relu'),
